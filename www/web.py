@@ -52,7 +52,7 @@ def generate_result_page(result):
     <title>Kincode translator result</title>
 </head>
 <body>
-    <a href="/">Back to home page</a>
+    <a href="./">Back to home page</a>
     <hr>
     {result}
 </body>
