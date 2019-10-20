@@ -1,5 +1,4 @@
 import re
-import sys
 
 _PLAYERS = {
     "🛡": "Armia",
@@ -39,17 +38,19 @@ _CLEANUP = [
 ]
 
 
-def decode(text: str, helper=True):
-    for code, item in _ALL.items():
-        repl = item
-        if helper:
-            repl = f'{item} ({code})'
-        text = text.replace(code, repl)
+def decode(source: str, helper=False):
+    for emoji, text in _ALL.items():
+        repl = f'{text} ({emoji})' if helper else text
+        source = source.replace(emoji, repl)
 
     for regex, repl in _CLEANUP:
-        text = regex.sub(repl, text)
+        source = regex.sub(repl, source)
 
-    return text
+    return source
 
 
-print(decode(sys.argv[1]))
+def encode(source: str, helper=False):
+    for emoji, text in _ALL.items():
+        repl = f'{emoji} ({text})' if helper else emoji
+        source = re.sub(text, repl, source, flags=re.IGNORECASE)
+    return source
