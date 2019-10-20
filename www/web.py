@@ -1,5 +1,6 @@
 import cgi
 
+import bottle
 from bottle import get, post, request, run
 
 import libkinkaid
@@ -40,8 +41,9 @@ def index():
 </html>
 """
 
+
 def generate_result_page(result):
-    #result = cgi.escape(result)
+    result = cgi.escape(result)
     return f"""\
 <!doctype html>
 <html>
@@ -57,6 +59,7 @@ def generate_result_page(result):
 </html>
 """
 
+
 @post("/decode")
 def decode():
     source = request.forms.source
@@ -71,4 +74,7 @@ def encode():
     return generate_result_page(result)
 
 
-run(host='localhost', port=8080, reloader=True)
+if __name__ == "__main__":
+    run(host="localhost", port=8000, reloader=True)
+else:
+    application = bottle.default_app()
