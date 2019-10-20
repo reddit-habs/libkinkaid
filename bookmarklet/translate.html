@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Keith Kinkaid twitter translator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+
+		<div class="jumbotron">
+
+			<h1 class="display-4">Keith Kinkaid twitter translator</h1>
+
+			<p class="lead">Automatically replaces Keith Kinkaid twitter emojis with English equivalent.</p>
+		  <hr class="my-4">
+		  <p>Just drag this link to your bookmarks bar and click to translate all his tweets!</p>
+		  <p class="lead">
+			<a class="btn btn-primary btn-lg" role="button" href="javascript:(function () { 
+			const _PLAYERS = {
+				'🛡': 'Armia',
+				'🐆': 'Byron',
+				'🍳': 'Chiarot',
+				'👨‍👦‍👦': 'Cousins',
+				'⚜️': 'Danault',
+				'Ⓜ️': 'Domi',
+				'✍🏽': 'Drouin',
+				'✝️': 'Folin',
+				'👨🏼': 'Gallagher',
+				'👶🏻': 'Kotkaniemi',
+				'❄️': 'Kulak',
+				'🇫🇮': 'Lehkonen',
+				'🥩': 'Mete',
+				'🧫': 'Petry',
+				'💲': 'Price',
+				'🏍': 'Suzuki',
+				'🐟': 'Tatar',
+				'🧔🏻': 'Thompson',
+				'🎡': 'Weal',
+				'🚀': 'Weber'
+			};
+			const _OTHERS = {'🚨': 'Goal', '🍎': 'Assist', 'w/': 'with'};
+
+			let kinkaidCode = {
+				..._PLAYERS, 
+				..._OTHERS
+			};
+			
+			let emojis = document.querySelectorAll('div.js-tweet-text-container p.tweet-text img.Emoji');
+			if (!emojis.length) {
+				alert('No tweets found! Go to Keith Kinkaid\'s twitter and try again https://twitter.com/Blockaid1');
+			}
+			[].forEach.call(emojis, function (emoji) {
+				if (kinkaidCode[emoji.alt]) {
+					let translation = document.createElement('strong');
+					translation.innerText =  ' '+ kinkaidCode[emoji.alt] + ' ';
+					emoji.parentNode.replaceChild(translation, emoji);
+				}
+			});
+		}());">Translate Keith Kinkaid</a>
+		  </p>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -8,3 +8,6 @@ Input:
 Output:
 > #GoHabsGo win again! Weal getting the boys goin with a PP Goal, Gallagher, Suzuki & Drouin each adding a Goal this afternoon. Weber with a 2pt day(1 Goal, 1 Assist). Also tallying an Assist are Cousins, Domi, Tatar, Thompson, Kotkaniemi & Danault, Price solid again with 32svs for the W. Special team 🔥 🔥 !
 
+## Also available as a bookmarklet
+
+Just download the ZIP, open translate.html, and follow instructions.
