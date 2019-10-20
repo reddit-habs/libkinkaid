@@ -23,7 +23,7 @@ def index():
 <body>
     <div>
         <h2>Decode</h2>
-        <form method="post" action="/decode">
+        <form method="post" action="./decode">
             <textarea name="source" cols="100" rows="5"></textarea>
             <br>
             <button type="submit">Decode</button>
@@ -31,7 +31,7 @@ def index():
     </div>
     <div>
         <h2>Encode</h2>
-        <form method="post" action="/encode">
+        <form method="post" action="./encode">
             <textarea name="source" cols="100" rows="5"></textarea>
             <br>
             <button type="submit">Encode</button>
