@@ -16,6 +16,7 @@ _PLAYERS = {
     "🥩": "Mete",
     "🧫": "Petry",
     "💲": "Price",
+    "🎤": "Reilly",
     "🏍": "Suzuki",
     "🐟": "Tatar",
     "🧔🏻": "Thompson",
