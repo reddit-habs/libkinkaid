@@ -1,34 +1,54 @@
 import re
 
 _PLAYERS = {
-    "🛡": "Armia",
-    "🐆": "Byron",
-    "🍳": "Chiarot",
-    "👨‍👦‍👦": "Cousins",
-    "⚜️": "Danault",
-    "Ⓜ️": "Domi",
-    "✍🏽": "Drouin",
-    "✝️": "Folin",
-    "👨🏼": "Gallagher",
-    "👶🏻": "Kotkaniemi",
-    "❄️": "Kulak",
-    "🇫🇮": "Lehkonen",
-    "🥩": "Mete",
-    "🧫": "Petry",
-    "💲": "Price",
-    "🎤": "Reilly",
-    "🏍": "Suzuki",
-    "🐟": "Tatar",
-    "🧔🏻": "Thompson",
-    "🎡": "Weal",
-    "🚀": "Weber",
+    "🛡": " Armia ",
+    "🐆": " Byron ",
+    "🍳": " Chiarot ",
+    "👨‍👦‍👦": " Cousins ",
+    "⚜️": " Danault ",
+    "Ⓜ️": " Domi ",
+    "✍🏽": " Drouin ",
+    "✝️": " Folin ",
+    "👨🏼": " Gallagher ",
+    "👶🏻": " Kotkaniemi ",
+    "❄️": " Kulak ",
+    "🇫🇮": " Lehkonen ",
+    "🥩": " Mete ",
+    "🧫": " Petry ",
+    "💲": " Price ",
+    "🎤": " Reilly ",
+    "🏍": " Suzuki ",
+    "🐟": " Tatar ",
+    "🧔🏻": " Thompson ",
+    "🎡": " Weal ",
+    "🚀": " Weber ",
 }
 
-_OTHERS = {"🚨": "Goal", "🍎": "Assist", "w/": "with"}
+_OTHERS = {
+  "🚨": " Goal ",
+  "🍎": " Assist ",
+  "🥊": " hit ",
+  "🥅": " net ",
+  "🍩": " shutout ",
+  "GW": " game winning ",
+  " PP ": " power play ",
+  "pt": " point",
+  "SV": " save",
+  "sv": " save",
+  " W ": " win ",
+  "w/": " with ",
+  " ! ": "! ",
+  "&": " & "
+}
+
+_SPACES = {
+  "  ": " "
+}
 
 _ALL = {}
 _ALL.update(_PLAYERS)
 _ALL.update(_OTHERS)
+_ALL.update(_SPACES)
 
 
 _CLEANUP = [
